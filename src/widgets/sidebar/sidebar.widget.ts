@@ -38,7 +38,6 @@ export class SidebarWidget {
   public id: string = SidebarSideEnum.LEFT;
 
   protected readonly SidebarWidgetNamesEnum = SidebarWidgetNamesEnum;
-  protected readonly SidebarSideEnum = SidebarSideEnum;
   protected isShowWidget: boolean = false;
   protected activeWidget: SidebarWidgetNamesEnum = SidebarWidgetNamesEnum.EMPTY;
   protected dropListConnectedTo: (CdkDropList | string)[] | CdkDropList | string = [SidebarSideEnum.LEFT, SidebarSideEnum.RIGHT];
