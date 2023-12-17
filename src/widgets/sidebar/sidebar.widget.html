@@ -20,13 +20,25 @@
       ></span>
     }
   </div>
-  @if (activeWidget){
-    <div class="widget-content widget-show">
-      {{ activeWidget }}
-    </div>
-  } @else {
-    <div class="widget-content">
-      {{ activeWidget }}
-    </div>
+  @switch (activeWidget){
+    @case (SidebarWidgetNamesEnum.CHECK){
+      <div class="widget-content widget-show">
+        <app-check-widget/>
+      </div>
+    }
+    @case (SidebarWidgetNamesEnum.HOME){
+      <div class="widget-content widget-show">
+        <app-home-widget/>
+      </div>
+    }
+    @case (SidebarWidgetNamesEnum.QUESTION){
+      <div class="widget-content widget-show">
+        <app-question-widget/>
+      </div>
+    }
+    @case (SidebarWidgetNamesEnum.EMPTY){
+      <div class="widget-content">
+      </div>
+    }
   }
 </div>
