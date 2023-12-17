@@ -1,10 +1,7 @@
 <nz-layout>
   <nz-header>HEADER</nz-header>
   <nz-layout>
-    <nz-sider nz-resizable>
-      <nz-resize-handle nzDirection="right" nzCursorType="grid">
-        <div class="sider-resize-line"></div>
-      </nz-resize-handle>
+    <nz-sider>
       <app-sidebar [side]="SidebarSideEnum.LEFT" [id]="SidebarSideEnum.LEFT" [iconSet]="leftIconsSet"/>
     </nz-sider>
     <nz-content>CONTENT</nz-content>
@@ -13,6 +10,9 @@
     </nz-sider>
   </nz-layout>
   <nz-footer>
-    <app-sidebar [side]="SidebarSideEnum.BOTTOM" [id]="SidebarSideEnum.BOTTOM" [iconSet]="bottomIconSet"/>
+    FOOTER
+<!--    <nz-sider>-->
+<!--    <app-sidebar [side]="SidebarSideEnum.BOTTOM" [id]="SidebarSideEnum.BOTTOM" [iconSet]="bottomIconSet"/>-->
+<!--    </nz-sider>-->
   </nz-footer>
 </nz-layout>

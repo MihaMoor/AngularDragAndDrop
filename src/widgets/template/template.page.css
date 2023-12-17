@@ -24,11 +24,12 @@
     color: #fff;
     line-height: 120px;
     height: 100%;
-    display: block;
-    flex: max-content !important;
-    min-width: max-content !important;
-    max-width: max-content !important;
-    width: max-content !important;
+    display: block !important;
+    flex: none !important;
+    /*flex: max-content !important;*/
+    min-width: 40px !important;
+    /*max-width: 100% !important;*/
+    width: auto !important;
   }
 
   nz-content {

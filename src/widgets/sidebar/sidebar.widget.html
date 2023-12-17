@@ -1,10 +1,32 @@
-<div class="wrapper">
-  <div class="icon-set {{side}}" cdkDropList id="{{id}}" [cdkDropListConnectedTo]="[SidebarSideEnum.LEFT, SidebarSideEnum.RIGHT, SidebarSideEnum.BOTTOM]" [cdkDropListData]="iconSet" (cdkDropListDropped)="dropped($event)">
+<div class="wrapper {{side}}">
+  <div
+    class="icon-set {{side}}"
+    cdkDropList
+    id="{{id}}"
+    [cdkDropListConnectedTo]="dropListConnectedTo"
+    [cdkDropListData]="iconSet"
+    (cdkDropListDropped)="dropped($event)"
+  >
     @for (icon of iconSet; track icon){
-      <span class="icon" cdkDrag nz-icon [nzType]="icon" style="font-size: 32px;"></span>
+      <span
+        class="icon"
+        id="{{icon}}"
+        cdkDrag
+        (cdkDragExited)="dragExited($event)"
+        nz-icon
+        [nzType]="icon"
+        style="font-size: 32px;"
+        (click)="showWidget(icon)"
+      ></span>
     }
   </div>
-<!--  <div class="widget-content">-->
-<!--    WIDGET CONTENT-->
-<!--  </div>-->
+  @if (activeWidget){
+    <div class="widget-content widget-show">
+      {{ activeWidget }}
+    </div>
+  } @else {
+    <div class="widget-content">
+      {{ activeWidget }}
+    </div>
+  }
 </div>
