@@ -1,0 +1,10 @@
+<div class="wrapper {{side}}">
+  <div class="icon-set" cdkDropList id="{{id}}" [cdkDropListConnectedTo]="[SidebarSideEnum.LEFT, SidebarSideEnum.RIGHT, SidebarSideEnum.BOTTOM]" [cdkDropListData]="iconSet" (cdkDropListDropped)="dropped($event)">
+    @for (icon of iconSet; track icon){
+      <span class="icon" cdkDrag nz-icon [nzType]="icon"></span>
+    }
+  </div>
+<!--  <div class="widget-content">-->
+<!--    WIDGET CONTENT-->
+<!--  </div>-->
+</div>

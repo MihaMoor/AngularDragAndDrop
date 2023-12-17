@@ -1,0 +1,16 @@
+<nz-layout>
+  <nz-header>HEADER</nz-header>
+  <nz-layout>
+    <nz-sider nz-resizable>
+      <nz-resize-handle nzDirection="right" nzCursorType="grid">
+        <div class="sider-resize-line"></div>
+      </nz-resize-handle>
+      <app-sidebar [side]="SidebarSideEnum.LEFT" [id]="SidebarSideEnum.LEFT" [iconSet]="leftIconsSet"></app-sidebar>
+    </nz-sider>
+    <nz-content>CONTENT</nz-content>
+    <nz-sider>
+      <app-sidebar [side]="SidebarSideEnum.RIGHT" [id]="SidebarSideEnum.RIGHT" [iconSet]="rightIconsSet"></app-sidebar>
+    </nz-sider>
+  </nz-layout>
+  <nz-footer>FOOTER</nz-footer>
+</nz-layout>
