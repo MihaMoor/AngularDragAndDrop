@@ -22,4 +22,5 @@ export class TemplatePage {
   protected readonly SidebarSideEnum = SidebarSideEnum;
   protected leftIconsSet: string[] = ['home','check-circle'];
   protected rightIconsSet: string[] = ['question-circle','pic-right','pic-left'];
+  protected bottomIconSet: string[] = ['fullscreen','fullscreen-exit'];
 }

@@ -5,12 +5,14 @@
       <nz-resize-handle nzDirection="right" nzCursorType="grid">
         <div class="sider-resize-line"></div>
       </nz-resize-handle>
-      <app-sidebar [side]="SidebarSideEnum.LEFT" [id]="SidebarSideEnum.LEFT" [iconSet]="leftIconsSet"></app-sidebar>
+      <app-sidebar [side]="SidebarSideEnum.LEFT" [id]="SidebarSideEnum.LEFT" [iconSet]="leftIconsSet"/>
     </nz-sider>
     <nz-content>CONTENT</nz-content>
     <nz-sider>
-      <app-sidebar [side]="SidebarSideEnum.RIGHT" [id]="SidebarSideEnum.RIGHT" [iconSet]="rightIconsSet"></app-sidebar>
+      <app-sidebar [side]="SidebarSideEnum.RIGHT" [id]="SidebarSideEnum.RIGHT" [iconSet]="rightIconsSet"/>
     </nz-sider>
   </nz-layout>
-  <nz-footer>FOOTER</nz-footer>
+  <nz-footer>
+    <app-sidebar [side]="SidebarSideEnum.BOTTOM" [id]="SidebarSideEnum.BOTTOM" [iconSet]="bottomIconSet"/>
+  </nz-footer>
 </nz-layout>
