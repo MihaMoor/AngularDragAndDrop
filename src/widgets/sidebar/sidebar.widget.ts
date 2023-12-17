@@ -72,7 +72,10 @@ export class SidebarWidget {
     }
   }
 
-  protected dragExited($event: CdkDragExit<string>): void {
+  protected dragExited(event: CdkDragExit<string>): void {
+    if(this.activeWidget !== this.getWidgetName(event.item.element.nativeElement.id)){
+      return;
+    }
     this.activeWidget = SidebarWidgetNamesEnum.EMPTY;
     this.isShowWidget = false;
   }
@@ -91,9 +94,6 @@ export class SidebarWidget {
         event.previousIndex,
         event.currentIndex
       );
-    }
-    if(this.isShowWidget){
-      this.activeWidget = this.getWidgetName(event.item.element.nativeElement.id);
     }
   }
 }
